@@ -19,7 +19,7 @@
         <!-- report name - displayed at top-nav -->
         <reportName>GetEpay Test Report
          <![CDATA[
-                <img src='D:\Eclipse Workspace\com.GetEpay\src\test\resources\Logo\download77.png'/>
+                <img src=>
             ]]>
         </reportName>
         

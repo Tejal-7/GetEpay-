@@ -7,10 +7,12 @@ import java.util.Properties;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
@@ -18,21 +20,28 @@ import org.testng.annotations.BeforeTest;
 import action.Action;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utility.ExtentManager;
+import utility.Log;
 
 public class BaseClass {
 public static Properties prop;
 public static WebDriver driver;
 
+/*@FindBy(xpath="//input[@id='user_email']")
+WebElement userName ;
+@FindBy(xpath="//input[@id='user_pass']")
+WebElement password;  
+@FindBy(xpath="//button[@class='btn  btn-primary btn-block']")
+WebElement loginBtn;*/
 
 @BeforeSuite
 public void loadConfig() throws IOException {
 	ExtentManager.setExtent();
 	DOMConfigurator.configure("log4j.xml");
 	
-	prop= new Properties();
+	prop = new Properties();
 	
 	try {
-		FileInputStream ip = new FileInputStream ("D:\\Eclipse Workspace\\com.GetEpay\\src\\test\\resources\\Configuration\\Config.properties");
+		FileInputStream ip = new FileInputStream ("C:\\Users\\TEJAL.SHINDE\\git\\GetEpay-\\com.GetEpay\\src\\test\\resources\\Configuration\\Config.properties");
 		prop.load(ip);
 		System.out.println(ip);
 	}
@@ -82,9 +91,23 @@ public void launchApp() {
 		driver.get(prop.getProperty("url"));	
 		
 	}
-	
+      
+     /*  public void loginmethod() throws InterruptedException
+       {
+    	   prop= new Properties();
+   		userName.sendKeys(prop.getProperty("username"));
+   		Log.info("usename is entered succesfully:"+ userName );
+   		
+   		password.sendKeys(prop.getProperty("password"));
+		Log.info("password entered successfully:"+ password);
+		Thread.sleep(8000);
 		
-	
+		loginBtn.click();
+		Log.info("Logged in successfully");
+		
+		
+       }*/
+  
 @AfterSuite
 public void aftersuite() {
 	ExtentManager.endReport();

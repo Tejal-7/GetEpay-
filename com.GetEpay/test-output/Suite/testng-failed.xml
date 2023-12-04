@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testClass.GetEpayLoginTest">
+      <class name="testClass.GetEpayAddNewSubjectTest">
         <methods>
-          <include name="login2"/>
           <include name="BeforeMethod"/>
           <include name="loadConfig"/>
           <include name="aftersuite"/>
+          <include name="addSubject"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testClass.GetEpayLoginTest -->
+      </class> <!-- testClass.GetEpayAddNewSubjectTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

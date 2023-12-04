@@ -36,14 +36,17 @@ public void BeforeMethod() {
 		 log.inpUsernameandPass(username1, password1);
 	 }
 	 @Test public void login2() throws InterruptedException {
+		 log=new GetEpayLogin();
 		log.loginWithInvalidCredentials(username2, password2);
 	 }
 	 @Test
-	 public void login3() {
+	 public void login3() throws InterruptedException {
+		 log=new GetEpayLogin();
 		 log.loginWithValidUNAndInvalidPass(username1, password2);
 	 }
 	 @Test
-	 public void login4() {
+	 public void login4() throws InterruptedException {
+		 log=new GetEpayLogin();
 		 log.loginWithinvalidUnAndValidPass(username2, password1);
 	 }
 	 @AfterMethod

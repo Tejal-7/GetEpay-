@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-08T14:03:43 IST" name="Suite" finished-at="2023-11-08T14:03:52 IST" duration-ms="9260">
+  <suite started-at="2023-11-18T16:15:33 IST" name="Suite" finished-at="2023-11-18T16:15:56 IST" duration-ms="22865">
     <groups>
     </groups>
-    <test started-at="2023-11-08T14:03:43 IST" name="Test" finished-at="2023-11-08T14:03:52 IST" duration-ms="9260">
-      <class name="testClass.GetEpayLoginTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:testClass.GetEpayLoginTest@4f2b503c]" started-at="2023-11-08T14:03:42 IST" name="loadConfig" finished-at="2023-11-08T14:03:43 IST" duration-ms="516" status="PASS">
+    <test started-at="2023-11-18T16:15:33 IST" name="Test" finished-at="2023-11-18T16:15:56 IST" duration-ms="22865">
+      <class name="testClass.GetEpayAddNewSubjectTest">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:testClass.GetEpayAddNewSubjectTest@306e95ec]" started-at="2023-11-18T16:15:32 IST" name="loadConfig" finished-at="2023-11-18T16:15:33 IST" duration-ms="757" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:testClass.GetEpayLoginTest@4f2b503c]" started-at="2023-11-08T14:03:43 IST" name="BeforeMethod" finished-at="2023-11-08T14:03:51 IST" duration-ms="8652" status="PASS">
+        <test-method is-config="true" signature="BeforeMethod()[pri:0, instance:testClass.GetEpayAddNewSubjectTest@306e95ec]" started-at="2023-11-18T16:15:33 IST" name="BeforeMethod" finished-at="2023-11-18T16:15:43 IST" duration-ms="9803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeMethod -->
-        <test-method signature="login2()[pri:0, instance:testClass.GetEpayLoginTest@4f2b503c]" started-at="2023-11-08T14:03:51 IST" name="login2" finished-at="2023-11-08T14:03:52 IST" duration-ms="16" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="addSubject()[pri:0, instance:testClass.GetEpayAddNewSubjectTest@306e95ec]" started-at="2023-11-18T16:15:43 IST" name="addSubject" finished-at="2023-11-18T16:15:55 IST" duration-ms="12158" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot invoke "pageObjectsPOM.GetEpayLogin.loginWithInvalidCredentials(String, String)" because "this.log" is null]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "pageObjectsPOM.GetEpayLogin.loginWithInvalidCredentials(String, String)" because "this.log" is null
-at testClass.GetEpayLoginTest.login2(GetEpayLoginTest.java:39)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:751)
+at org.testng.Assert.assertEquals(Assert.java:761)
+at pageObjectsPOM.GetEpayAddNewSubject.verifySuccessPopup(GetEpayAddNewSubject.java:95)
+at testClass.GetEpayAddNewSubjectTest.addSubject(GetEpayAddNewSubjectTest.java:43)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,19 +59,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login2 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testClass.GetEpayLoginTest@4f2b503c]" started-at="2023-11-08T14:03:52 IST" name="tearDown" finished-at="2023-11-08T14:03:52 IST" duration-ms="334" status="PASS">
+        </test-method> <!-- addSubject -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testClass.GetEpayAddNewSubjectTest@306e95ec]" started-at="2023-11-18T16:15:55 IST" name="tearDown" finished-at="2023-11-18T16:15:56 IST" duration-ms="558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="aftersuite()[pri:0, instance:testClass.GetEpayLoginTest@4f2b503c]" started-at="2023-11-08T14:03:52 IST" name="aftersuite" finished-at="2023-11-08T14:03:53 IST" duration-ms="572" status="PASS">
+        <test-method is-config="true" signature="aftersuite()[pri:0, instance:testClass.GetEpayAddNewSubjectTest@306e95ec]" started-at="2023-11-18T16:15:56 IST" name="aftersuite" finished-at="2023-11-18T16:15:57 IST" duration-ms="1317" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftersuite -->
-      </class> <!-- testClass.GetEpayLoginTest -->
+      </class> <!-- testClass.GetEpayAddNewSubjectTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

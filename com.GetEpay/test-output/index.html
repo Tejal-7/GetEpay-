@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\TEJAL.SHINDE\git\repository\com.GetEpay\LoginScenarios.xml</span>
+                    <span>C:\Users\TEJAL.SHINDE\git\GetEpay-\com.GetEpay\AddNewSub.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testClass.GetEpayLoginTest" class="method navigator-link" hash-for-method="login2">login2</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testClass.GetEpayAddNewSubjectTest" class="method navigator-link" hash-for-method="addSubject">addSubject</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -120,18 +120,19 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testClass.GetEpayLoginTest</span>
+              <span class="class-name">testClass.GetEpayAddNewSubjectTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login2">
-                  </a> <!-- login2 -->
-                  <span class="method-name">login2</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjectsPOM.GetEpayLogin.loginWithInvalidCredentials(String, String)&quot; because &quot;this.log&quot; is null
-	at testClass.GetEpayLoginTest.login2(GetEpayLoginTest.java:39)
+                  <a name="addSubject">
+                  </a> <!-- addSubject -->
+                  <span class="method-name">addSubject</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at pageObjectsPOM.GetEpayAddNewSubject.verifySuccessPopup(GetEpayAddNewSubject.java:95)
+	at testClass.GetEpayAddNewSubjectTest.addSubject(GetEpayAddNewSubjectTest.java:43)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -140,7 +141,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\TEJAL.SHINDE\git\repository\com.GetEpay\LoginScenarios.xml</span>
+            <span class="header-content">C:\Users\TEJAL.SHINDE\git\GetEpay-\com.GetEpay\AddNewSub.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -152,14 +153,11 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testClass.GetEpayLoginTest&quot;&gt;
+      &lt;class name=&quot;testClass.GetEpayAddNewSubjectTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;login2()&quot;/&gt;
-          &lt;exclude name=&quot;login1()&quot;/&gt;
-          &lt;exclude name=&quot;login3()&quot;/&gt;
-          &lt;exclude name=&quot;login4()&quot;/&gt;
+          &lt;include name=&quot;addSubject()&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testClass.GetEpayLoginTest --&gt;
+      &lt;/class&gt; &lt;!-- testClass.GetEpayAddNewSubjectTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -201,14 +199,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login2')
-data.setCell(0, 2, 'testClass.GetEpayLoginTest')
-data.setCell(0, 3, 16);
+data.setCell(0, 1, 'addSubject')
+data.setCell(0, 2, 'testClass.GetEpayAddNewSubjectTest')
+data.setCell(0, 3, 12158);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 ms</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -223,20 +221,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testClass.GetEpayLoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">login3</span>
-                <br/>
-                <span class="ignored-method-name">login1</span>
-                <br/>
-                <span class="ignored-method-name">login4</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -245,28 +232,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testClass.GetEpayLoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testClass.GetEpayAddNewSubjectTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">loadConfig</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">BeforeMethod</span>
-                <span class="method-start">559 ms</span>
+                <span class="method-start">791 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">login2</span>
-                <span class="method-start">9228 ms</span>
+                <span class="method-name">addSubject</span>
+                <span class="method-start">10595 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">9443 ms</span>
+                <span class="method-start">23063 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">aftersuite</span>
-                <span class="method-start">9801 ms</span>
+                <span class="method-start">23647 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-			<listeners>
+		<listeners>
 	<listener class-name="utility.ListenersClass" />
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testClass.GetEpayLoginTest">
+      <class name="testClass.GetEpayAddNewSubjectTest">
 		  <methods>
-			  <exclude name="login1()"></exclude>
-			   <exclude name="login2()"></exclude>
-                <exclude name="login3()"></exclude>
-			   <include name="login4()"></include>
-
-			
-
+			  <include name="addSubject()"></include>
 		  </methods>
+		  
       </class>
     </classes>
   </test> <!-- Test -->

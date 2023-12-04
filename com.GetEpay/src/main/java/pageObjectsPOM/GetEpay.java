@@ -24,6 +24,7 @@ public class GetEpay extends BaseClass{
 	ExtentManager  manager;
 	ListenersClass ls;
 	//Declaration 
+	
 	@FindBy(xpath="//input[@id='user_email']")
 	WebElement userName ;
 	@FindBy(xpath="//input[@id='user_pass']")

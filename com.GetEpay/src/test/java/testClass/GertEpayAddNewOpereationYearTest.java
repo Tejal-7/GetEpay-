@@ -7,49 +7,39 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import action.Action;
 import baseClass.BaseClass;
 import pageObjectsPOM.GetEpay;
-import pageObjectsPOM.GetEpayCreateClass;
+import pageObjectsPOM.GetEpayCreateOperationYear;
 import pageObjectsPOM.GetEpayLogin;
 import utility.ExtentManager;
 import utility.ListenersClass;
 
-public class AddNewClassTest  extends BaseClass{
+public class GertEpayAddNewOpereationYearTest extends BaseClass {
 	ExtentReports extent;
 	ExtentTest test;
 	ExtentManager manager;
 	ListenersClass ls;
-	 GetEpayCreateClass createClass;
 	 GetEpay login;
 	 String username = "supportespgetepay1@eshiksa.com";
 	 String pass= "12345";
-	 
+	 GetEpayCreateOperationYear opYear;
 	 @BeforeMethod
 public void BeforeMethod() {
 		// Action.implicitWait(driver, 5);
 		 launchApp();
 	 }
-	 @Test
-	 public void addnewClass() throws InterruptedException {
+	 @Test 
+	 public void addNewOpereationYear() throws InterruptedException {
 		 login= new  GetEpay ();
-		 createClass= new  GetEpayCreateClass ();
 		 login.inpUsernameandPass(username, pass);
-		 
-		 createClass.clickClass();
-		 createClass.clickManageClass();
-		createClass.clickAddClass();
-		 createClass.inpClassName();
-		 Thread.sleep(5000);
-	
-		createClass.inpClassDetails();
-		 Thread.sleep(5000);
-		 createClass.inpClassDetails();
-		 //Thread.sleep(7000);
-		 createClass.clickAddClassBtn();
-		 Thread.sleep(3000);
-		 createClass.verifyValidation();
-		 
+		 opYear= new GetEpayCreateOperationYear();
+		 opYear.clickSettingBtn();
+		 opYear.clickOpereationYearSetting();
+		 opYear.inpOpereationYear();
+		 opYear.inpStartDate();
+		 opYear.inpEndDate();
+		 opYear.clickAddOpereationYear();
+		 Thread.sleep(2000);
 	 }
 	 @AfterMethod
 	 public void tearDown() {
